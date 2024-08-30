@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+    <script>
+    var quatro = 4
+    var um_q_vira_quatro = 1
+    var lista = []
+    var sum = 0
+    while (quatro != 0){
+        var nota = parseFloat(prompt('Insira a '+ um_q_vira_quatro +'ª nota: '))
+        lista.push(nota)
+        sum += nota
+        um_q_vira_quatro += 1
+        quatro -= 1
+    }
+    alert('As notas são: '+ lista +'\nA média é: '+ sum/um_q_vira_quatro)
+    </script>
+    <a href="4.html">PRÓXIMA</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <script>
+        var tudo = []
+        var par = []
+        var impar = []
+        var count = 20
+        while (count != 0){
+            var num = parseFloat(prompt('Insira um número (números restantes: '+ count + '): '))
+            tudo.push(num)
+            if (num % 2 == 0){
+                par.push(num)
+            } else{
+                impar.push(num)
+            }
+            count -= 1
+        }
+        alert(tudo + '\n'+ par +'\n'+ impar)
+    </script>
+    <a href="6.html">PRÓXIMA</a>
+</body>
+</html>

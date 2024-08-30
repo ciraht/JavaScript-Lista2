@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        var lista = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+        var letras = ['e', 'f', 'i', 'd', 'p', 'h', 'q', 'a', 'l', 'c']
+        var consoante = []
+        var count = 0
+        for (char in letras){
+            for (cons in lista){
+                if (letras[char] == lista[cons]){
+                    count += 1
+                    consoante.push(letras[char])
+                }
+            }
+        }
+        alert('Na lista haviam '+ count +' consoantes, sendo elas: '+ consoante)
+    </script>
+    <a href="5.html">PRÓXIMA</a>
+</body>
+</html>
