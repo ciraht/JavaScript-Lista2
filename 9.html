@@ -6,7 +6,17 @@
 </head>
 <body>
     <script>
-        
+        var A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        var B = []
+        var show = 0
+        for (i in A){
+            var sum = A[i]*A[i]
+            B.push(sum)
+        }
+        for (x in B){
+            show += B[x]
+        }
+        alert(show)
     </script>
     <a href="10.html">PRÓXIMA</a>
 </body>

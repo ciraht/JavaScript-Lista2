@@ -6,7 +6,22 @@
 </head>
 <body>
     <script>
-        
+        var idade = []
+        var altura = []
+        var count = 1
+        while (true){
+            var idade_ = parseInt(prompt('Insira a idade, pessoa '+ count + ': '))
+            idade.push(idade_)
+            var altura_ = parseFloat(prompt('Insira a altura, pessoa '+ count +': '))
+            altura.push(altura_)
+            if (count == 5){
+                break
+            }
+            count += 1
+        }
+        altura.reverse()
+        idade.reverse()
+        alert(altura + '\n'+idade)
     </script>
     <a href="9.html">PRÓXIMA</a>
 </body>

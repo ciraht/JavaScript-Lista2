@@ -6,7 +6,35 @@
 </head>
 <body>
     <script>
-        
+        var media = []
+        var show = []
+        var count = 1
+        var count2 = 1
+        while (true){
+            var nota = parseFloat(prompt('Insira a '+ count2 +'ª nota do '+ count + 'º aluno:'))
+            count2 += 1
+            var nota2 = parseFloat(prompt('Insira a '+ count2 +'ª nota do '+ count + 'º aluno:'))
+            count2 += 1
+            var nota3 = parseFloat(prompt('Insira a '+ count2 +'ª nota do '+ count + 'º aluno:'))
+            count2 += 1
+            var nota4 = parseFloat(prompt('Insira a '+ count2 +'ª nota do '+ count + 'º aluno:'))
+            count2 += 1
+            var soma = (nota + nota2 + nota3 + nota4)/4
+            media.push(soma)
+            count2 -= 4
+            if (count == 10){
+                break
+            }
+            count += 1
+        }
+        for (num in media){
+            if (media[num] >= 7.0){
+                show.push(media[num])
+            }
+        }
+        var show2 = show.length
+        alert('O número de alunos com a média maior ou igual à 7.0 é: '+ show2)
+
     </script>
     <a href="7.html">PRÓXIMA</a>
 </body>
