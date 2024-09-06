@@ -6,7 +6,43 @@
 </head>
 <body>
     <script>
+        var count = 1
+        var nomes = []
+        var saltos = []
+        var medias = []
+        var historico = []
+        var media = 0
+        var maior = 0
+        var id = 0
+        while (true){
+            var nome = prompt('Insira o nome do atleta (deixe em branco para encerrar): ')
+            if (nome === ''){
+                break
+            }
+            nomes.push(nome)
+            while (count != 6){
+                var salto = parseFloat(prompt('Insira o valor do '+count+'º salto: '))
+                saltos.push(salto)
+                count += 1
+            }
+            count = 1
+            for (salto in saltos){
+                media += saltos[salto]
+            }
+            media == media/5
+            medias.push(media)
+            historico.push(saltos)
+            saltos = []
+        }
+        for (i in medias){
+            if (medias[i]>maior){
+                maior = medias[i]
+                id = i
+            }
+        }
+
         
+        alert('GANHADOR: '+ nomes[id] +'\nSaltos: '+historico[id].join(' - ')+'\nMédia: '+maior)
     </script>
     <a href="18.html">PRÓXIMA</a>
 </body>

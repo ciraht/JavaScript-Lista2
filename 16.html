@@ -6,15 +6,48 @@
 </head>
 <body>
     <script>
-        var lista = []
-        while(true){
-            var num = parseFloat(prompt('Insira seu salário (-1 para encerrar): '))
-            if (num == -1){
-                break
-            }
-            lista.push(num)
-
+    var lista = []
+    var lista2 = []
+    var meta = 200
+    var meta_max = 299
+    
+    while (true) {
+        var num = parseFloat(prompt('Insira a venda bruta do vendedor (-1 para encerrar): '))
+        if (num === -1) {
+            break
         }
+        lista.push(num)
+    }
+
+    for (var i = 0; i < lista.length; i++) {
+        var comissao = lista[i] * 0.09 + 200 
+        var categoria = 2
+
+        while (comissao > meta_max) {
+            meta += 100
+            meta_max += 100
+            categoria++
+        }
+
+        lista2.push(categoria)
+    }
+
+    var categorias = {} //lembrar que isso é um dicionário
+    for (var i = 2; i <= 9; i++) {
+        categorias[i] = lista2.filter(x => x === i).length
+    }
+    categorias[10] = lista2.filter(x => x >= 10).length
+
+    alert('$200 - $299 = ' + categorias[2] +
+          '\n$300 - $399 = ' + categorias[3] +
+          '\n$400 - $499 = ' + categorias[4] +
+          '\n$500 - $599 = ' + categorias[5] +
+          '\n$600 - $699 = ' + categorias[6] +
+          '\n$700 - $799 = ' + categorias[7] +
+          '\n$800 - $899 = ' + categorias[8] +
+          '\n$900 - $999 = ' + categorias[9] +
+          '\n$1000 em diante = ' + categorias[10])
+</script>
     </script>
     <a href="17.html">PRÓXIMA</a>
 </body>
