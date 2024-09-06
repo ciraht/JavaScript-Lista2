@@ -6,8 +6,55 @@
 </head>
 <body>
     <script>
-        
+        var lista = []
+        var maiores = []
+        var soma = 0
+        var media = 0
+        var qtd_maiores = 0
+        var qtd = 0
+        var reverso = 0
+        var qtd_sete = 0
+        var count = 0
+        var mensagem = ''
+        while (true){
+            var num = parseFloat(prompt('Insira a nota (-1 para encerrar): '))
+            if (num ==-1){
+                break
+            }else{
+                lista.push(num)
+            }
+        }
+        qtd = lista.length
+ 
+        for (i in lista){
+            soma += lista[i]
+        }
+        reverso = lista.reverse()
+        for (i = reverso.length - 1; i >= 0; i--) {
+            mensagem += reverso[i] + '\n'
+        }
+        media = soma/qtd
+        for (i in lista){
+            if (lista[i] > media){
+                maiores.push(lista[i])
+            }
+        }
+        qtd_maiores = maiores.length
+        for (i in lista){
+            if (lista[i] < 7){
+                qtd_sete += 1
+            }
+        }
+
+        alert('Quantidade de termos digitados: ' + qtd)
+        alert('Lista completa ' + lista)
+        alert('Números digitados, um embaixo do outro:\n'+mensagem)
+        alert('Soma dos números digitados: '+ soma)
+        alert('Média: ' + media)
+        alert('Quantidade de números maiores que a média: ' + qtd_maiores)
+        alert('Quantidade de números menores que 7: ' + qtd_sete)
+        alert('Acabou.')
     </script>
-    <a href="16.html">PRÓXIMA</a>
+     <a href="16.html">PRÓXIMA</a>
 </body>
 </html>
