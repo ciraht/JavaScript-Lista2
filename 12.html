@@ -6,24 +6,37 @@
 </head>
 <body>
     <script>
-        var idade = []
         var altura = []
+        var altura13 = []
         var count = 1
+        var soma = 0
+        var count2 = 0
         while (true){
-            var idade_ = parseInt(prompt('Insira a idade, aluno '+ count + ': '))
-            if (idade_ > 13){
-                idade.push(idade_)
+            var idade = parseInt(prompt('Insira a idade, aluno '+ count + ': '))
+            if (idade > 13){
+                var altura_ = parseFloat(prompt('Insira a altura, aluno '+ count +': '))
+                altura13.push(altura_)
+                altura.push(altura_)
+            } else {
+            var altura__ = parseFloat(prompt('Insira a altura, aluno '+ count +': '))
+            altura.push(altura__)
             }
-            var altura_ = parseFloat(prompt('Insira a altura, aluno '+ count +': '))
-            altura.push(altura_)
-            if (count == 5){
+            if (count == 30){
                 break
             }
             count += 1
         }
         for (i in altura){
-            
+            soma += altura[i]
         }
+        soma /= count  
+        for (alt in altura13){
+            if (altura13[alt] < soma){
+                count2 += 1
+            }
+        }
+        alert('O número de alunos com mais de 13 anos que possuem altura inferior à média de altura é: '+ count2)
+        // socorro eu não sei mais o que eu faço pra essa porra funcionar
     </script>
     <a href="13.html">PRÓXIMA</a>
 </body>

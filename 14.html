@@ -6,7 +6,23 @@
 </head>
 <body>
     <script>
-        
+        var perguntas = ["Telefonou para a vítima?","Esteve no local do crime?","Mora perto da vítima?","Devia para a vítima?","Já trabalhou com a vítima?"]
+        count_respostas = 0
+        for (i = 0; i < perguntas.length; i++) {
+            var pergunta = prompt(perguntas[i]).toUpperCase();
+            if (pergunta === 'SIM' || pergunta === 'S') {
+                count_respostas++;
+            }
+        }
+        if (count_respostas == 2){
+            alert('Suspeita')
+        } else if (count_respostas == 3 || count_respostas == 4){
+            alert('Cúmplice')
+        } else if (count_respostas == 5){
+            alert('Assassino')
+        } else{
+            alert('Inocente')
+        }
     </script>
     <a href="15.html">PRÓXIMA</a>
 </body>

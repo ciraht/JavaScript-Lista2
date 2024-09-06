@@ -6,7 +6,38 @@
 </head>
 <body>
     <script>
-        
+        var meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+        var meses_de_novo = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+        var temp = []
+        var meses_mais_uma_vez = []
+        var passaram = []
+        var lista = []
+        var count = 12
+        var soma = 0
+        while (count != 0){
+            var num = parseFloat(prompt('Insira aqui a média de temperatura do mês de '+ meses.shift()+ ':'))
+            temp.push(num)
+            count -= 1
+        }
+        for (temperaturas in temp){
+            soma += temp[temperaturas]
+        }
+        soma /= 12
+        for (temperaturas in temp)
+            if (soma < temp[temperaturas]){
+                passaram.push(temp[temperaturas])
+                var mes_passou = meses_de_novo.shift()
+                meses_mais_uma_vez.push(mes_passou)
+            } else {
+                meses_de_novo.shift()
+            }
+        for (show in passaram){
+            lista.push(passaram[show])
+            lista.push(' - ')
+            lista.push(meses_mais_uma_vez[show])
+            lista.push('\n')
+        }
+        alert(lista)
     </script>
     <a href="14.html">PRÓXIMA</a>
 </body>
