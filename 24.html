@@ -6,7 +6,20 @@
 </head>
 <body>
     <script>
-        
+        var dado = []
+        count = 0
+        while (count !=100){
+            var num = Math.floor(Math.random() * 6) + 1
+            dado.push(num)
+            count+=1
+        }
+        var um = dado.filter(x => x == 1).length
+        var dois = dado.filter(x => x == 2).length  
+        var tres = dado.filter(x => x == 3).length  
+        var quatro = dado.filter(x => x == 4).length  
+        var cinco = dado.filter(x => x == 5).length  
+        var seis = dado.filter(x => x == 6).length
+        alert('1 = '+ um +'\n2 = '+ dois + '\n3 = '+ tres+ '\n4 = '+ quatro + '\n5 = '+ cinco +'\n6 = '+ seis)      
     </script>
 </body>
 </html>

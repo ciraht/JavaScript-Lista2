@@ -6,7 +6,33 @@
 </head>
 <body>
     <script>
-        
+        var carros = ['Fusca', 'Gol', 'Vectra', 'Uno', 'Peugeout']
+        var kml = [7, 10, 12.5, 9, 14.5]
+        var mil_lista = []
+        var rs_lista = []
+        var menor = 99999
+        var position = 0
+        var carro_menor
+        for (i in kml){
+            var mil = 1000/kml[i]
+            mil_lista.push(mil)
+            var rs = mil*2.25
+            rs_lista.push(rs)
+        }
+        for (x in mil_lista){
+            if (mil_lista[x]<menor){
+                menor = mil_lista[x]
+                position = x
+            }
+        }
+        for (z in carros){
+            if (z == position){
+                carro_menor = carros[z]
+            }
+        }
+        for (i in carros){
+            alert(carros[i] +' = '+ kml[i]+ ' - '+ mil_lista[i]+ ' - R$'+ rs_lista[i])
+        }
     </script>
     <a href="22.html">PRÓXIMA</a>
 </body>

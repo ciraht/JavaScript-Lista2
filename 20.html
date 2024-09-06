@@ -6,7 +6,29 @@
 </head>
 <body>
     <script>
-        
+        var salario = []
+        var abono = []
+        count = 0
+        count_abono = 0 
+        while (true){
+            var sal = parseFloat(prompt('Inserir salário (0 para encerrar): '))
+            if (sal == 0){
+                break
+            }
+            salario.push(sal)
+            count += 1
+        }
+        for (i in salario){
+            var calculo = (salario[i] * 20 / 100)
+            if (calculo <= 100){
+                calculo = 100
+                count_abono +=1
+            }
+            abono.push(calculo)
+        }  
+        for (i in salario){
+            alert('Salário: '+ salario[i] + '\nAbono: '+ abono)
+        }
     </script>
     <a href="21.html">PRÓXIMA</a>
 </body>

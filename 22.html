@@ -6,7 +6,30 @@
 </head>
 <body>
     <script>
-        
+        var data = []
+        while (true){
+            var id = parseInt(prompt('ID: '))
+            if (id == 0){
+                break
+            }
+            if (id == 1 || id == 2 || id == 3 || id == 4){
+                data.push(id)
+            }
+        }
+        var count = data.length
+        if (count > 200){
+            alert('ERRO, APENAS 200 MOUSES ESTÃO ARMAZENADOS NO SISTEMA')
+        } else{
+            var um = data.filter(x => x == 1).length
+            var dois = data.filter(x => x == 2).length  
+            var tres = data.filter(x => x == 3).length  
+            var quatro = data.filter(x => x == 4).length
+            var pc1 = um*100/count
+            var pc2 = dois*100/count
+            var pc3 = tres*100/count
+            var pc4 = quatro*100/count
+            alert('Situação                 Quantidade          Percentual\n1-Necessita da esfera     '+ um +'               '+pc1+'\n2-Necessita de limpeza    '+dois+'               '+pc2+'\n3-Troca do cabo/conector  '+tres+'               '+pc3+'\n4-Quebrado ou inutilizado '+quatro+'             '+pc4)
+        }
     </script>
     <a href="23.html">PRÓXIMA</a>
 </body>
